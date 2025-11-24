@@ -13,12 +13,12 @@ public class KafkaConsumerService
     @KafkaListener(topics = "location-updates", groupId = "driver-location-consumer-group-1")
     public void listenOnConsumer1(String driverLocationMessage)
     {
-        log.info("Message consumed from Kafka-Topic: {} by consumer-1: ", driverLocationMessage);
+        log.info("Message consumed from [Kafka-Topic: location-updates] by [consumer-1] : {}", driverLocationMessage);
     }
 
     @KafkaListener(topics = "location-updates", groupId = "driver-location-consumer-group-1")
     public void listenOnConsumer2(String driverLocationMessage)
     {
-        log.info("Message consumed from Kafka-Topic: {} by consumer-2: ", driverLocationMessage);
+        log.info("Message consumed from [Kafka-Topic: location-updates] by [consumer-2] : {}", driverLocationMessage);
     }
 }
